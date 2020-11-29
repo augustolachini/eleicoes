@@ -32,7 +32,7 @@ app.layout = html.Div(
     ])
 )
 
-@app.callback(dash.dependencies.Output('example-graph', 'children'))
-
+@app.callback(dash.dependencies.Output('example-graph', 'children'),
+              [dash.dependencies.Input('dropdown', 'value')]))
 if __name__ == '__main__':
     app.run_server(debug=True)
