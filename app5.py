@@ -23,5 +23,11 @@ app.layout = html.Div([
               )
     ])
 
+@app.callback(
+    Output(component_id='the_graph', component_property='figure'),
+    [Input(component_id='xaxis_raditem', component_property='value'),
+     Input(component_id='yaxis_raditem', component_property='value')]
+)
+
 if __name__ == '__main__':
     app.run_server(debug=True)
